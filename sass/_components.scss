@@ -1,0 +1,112 @@
+/////////////////////////////////////
+/*NAVIGATION */
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(187, 187, 187);
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(187, 187, 187, 07)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-brand {
+    width: 15rem;
+    height: 4rem;
+}
+
+.navbar-nav {
+    padding: 3rem 0;
+    @include respond (lg) {
+        background-color: rgba($color: #000000, $alpha: .60);
+        margin-top: .5rem;
+        align-items: flex-start;
+    }
+}
+
+.nav-link {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    @include respond (lg) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $color-primary;
+    font-family: $secondary-font;
+    font-weight: 400;
+    transition: transform .3s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+        @include respond (lg) {
+            transform: scale(1);
+        }
+    }
+}
+
+.navbar-collapse {
+    z-index: 7000;
+}
+
+/////////////////////////////////////////////
+/* BUTTON INLINE  */
+
+.btn {
+    border: none;
+    color: $color-primary;
+    font-style: $secondary-font;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-orange-light;
+    display: inline-block;
+    cursor: pointer;
+    transition: padding .3s ease-out;
+    padding-left: .3rem;
+    padding-right: .3rem;
+    @include respond(tab-port) {
+        padding: 3rem 0 0 0;
+    }
+    &:hover {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+    &--retainp {
+        align-self: center;
+        margin-right: 15rem;
+        @include respond(tab-port) {
+            padding: 10rem 0 0 0;
+        }
+    }
+    &--tourbox {
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border-bottom: 2px solid $color-orange-light;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-top: 2px solid transparent;
+        transition: border .3s ease-in, padding .3s ease-out;
+        &:hover {
+            border-left: 2px solid $color-orange-light;
+            border-right: 2px solid $color-orange-light;
+            border-top: 2px solid $color-orange-light;
+            border-bottom: 2px solid $color-orange-light;
+            background-color: rgba($color: #000000, $alpha: .40);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-right: 5rem;
+            padding-left: 5rem;
+        }
+    }
+    &--cards {
+        color: $color-primary-dark;
+        &:hover {
+            color: $color-grey;
+        }
+    }
+}

@@ -1,0 +1,216 @@
+/* CUSTOM BREAKPOINTS */
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media (max-width: 37.5em) {
+            /* 600 / 16 */
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==tab-port {
+        @media (max-width: 56.25em) {
+            //900
+            @content
+        }
+        ;
+    }
+    /*   IMAGE SHRINKAGE  */
+    @if $breakpoint==lg {
+        //992
+        @media (max-width: 62em) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==ipad {
+        //768
+        @media (max-width: 48em) {
+            @content
+        }
+        ;
+    }
+
+    @if $breakpoint==tab-land {
+        //1200
+        @media (max-width: 75em) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==desktop {
+        //1800
+        @media (max-width: 93.7em) {
+            @content
+        }
+        ;
+    }
+}
+
+:root {
+    --color-primary: #F6F6F6;
+    --color-primary-dark: #484848;
+    --color-orange-light: #FFA100;
+    --color-orange-dark: #CE8C1B;
+    --color-grey:#6B6B6B;
+    --shadow-dark: 0 2.5rem 4rem rgba(0, 0, 0, .4);
+    --shadow-light: 0 3px 4rem rgba(0, 0, 0, .16);
+    --secondary-font: 'Titillium Web', sans-serif;
+}
+
+$color-primary: #F6F6F6;
+$color-primary-dark: #484848;
+$color-orange-light: #FFA100;
+$color-orange-dark: #CE8C1B;
+$color-grey: #6B6B6B;
+$shadow-dark:  0 2.5rem 4rem rgba(0, 0, 0, .4);
+$shadow-light: 0 3px 4rem rgba(0, 0, 0, .16);
+$secondary-font: 'Titillium Web', sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px, 10px / 16px = 62.5%
+    @media (min-width:112.5em) {
+        font-size: 72.5%;
+    }
+
+    @include respond (tab-land) {
+        font-size: 57.5%;
+    }
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: $color-primary;
+    &:hover {
+        color: darken($color-primary, 15%);
+        text-decoration: none;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    background: $color-primary;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* FONTS */
+
+h1 {
+    font-size: 7rem;
+    @include respond (lg) {
+        font-size: 5.5rem;
+     }
+}
+
+h2 {
+    font-size: 4.5rem;
+    @include respond (lg) {
+        font-size: 3.5rem;
+     }
+}
+
+h1,
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    color: $color-primary;
+}
+
+h3 {
+    font-family: $secondary-font;
+    font-size: 4rem;
+    font-weight: 400;
+    color: $color-primary;
+
+    @include respond (lg) {
+        font-size: 2.8rem;
+        line-height: 1.5;
+     }
+}
+
+h4 {
+    font-size: 2.2rem;
+    color: $color-primary-dark;
+    font-family: $secondary-font;
+}
+
+h5 {
+    font-size: 2rem;
+    font-family: $secondary-font;
+    color: $color-primary;
+}
+
+h6 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-family: $secondary-font;
+    color: $color-primary;
+}
+
+/* HELPER CLASSES */
+
+.pverymost {
+    padding-top: 15rem;
+}
+
+.pmost {
+    padding-top: 9rem;
+}
+
+.pmore {
+    padding-top: 7rem
+}
+
+.p3 {
+    padding-top: 3rem;
+}
+
+.pleast {
+    padding-top: 2rem;
+}
+
+.mlr {
+    margin: 0 10rem;
+}
+
+.p-wrap {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/* WILL VARY */
+.falign {
+    margin-right: 3rem;
+}
+
+.skewfix {
+    margin-top: -14vh;
+
+    @media (min-width:112.5em) {
+        margin-top: -17vh;
+    }
+}
+
+::selection {
+    background: #1b5187;
+    color: #fff;
+}
