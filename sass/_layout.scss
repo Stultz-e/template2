@@ -5,14 +5,11 @@
 /* CTA SECTION  */
 
 .cta {
-    height: 108vh;
-    background-image: linear-gradient(to right top, rgba(72, 72, 72, .40), rgba(14, 14, 14, .40)), url(../img/cta-img.jpg);
+    height: 100vh;
+    background-image: url(/img/cta-img.png);
     background-position: center;
     background-size: cover;
     z-index: 40000;
-    @media (min-width: 112.5em) {
-        height: 115vh;
-    }
     &__text-box {
         position: absolute;
         top: 50%;
@@ -20,164 +17,144 @@
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
-        @media (min-width: 112.5em) {
-            top: 45%;
-        }
     }
 }
 
-/* OPTIONS SECTION */
+.content {
+    height: 100vh;
+    width: 100%;
+    position: relative;
 
-.options {
-    padding: 10rem 0 22rem;
-    @include respond (lg) {
-        padding: 4rem 0 15rem;
+    &--paragraph {
+        height: 50vh;
     }
-}
 
-.cards {
-    display: block;
-    flex-flow: column nowrap;
-    justify-content: center;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, .16);
-    @include respond (lg) {
-        margin-bottom: 4rem;
-    }
-    img {
-        height: auto;
+    &--floorpicker {
+        height: 100vh;
+        background-image: url(/img/cta-img.png);
+        background-position: center;
+        background-size: cover;
         width: 100%;
+        position: relative;
     }
-    &__content {
-        padding: 3rem 1rem;
-        p {
-            font-size: 1.4rem;
-            max-width: 25.8rem;
-            margin: auto;
-            line-height: 2.5rem;
-            @include respond (lg) {
-                max-width: 70%;
-            }
-        }
-        h4 {
-            padding-bottom: 1.5rem;
-        }
-    }
-}
 
-/* SKEWED CONTENT SECTIONS */
-
-.skewed-content {
-    background-position: center;
-    background-size: cover;
-    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 2;
-    h3 {
-        text-align: center;
-    }
-    p {
-        color: $color-primary;
-        font-size: 1.5rem;
-        line-height: 2.8rem;
-        text-align: center;
-        max-width: 96.2rem;
-    }
-    &--1 {
-        padding: 20vh 1rem;
-        background-image: linear-gradient(to right top, rgba(59, 59, 59, 1), rgba(39, 39, 39, .75)), url('../img/skewed-img1.jpg');
-        clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
-        @include respond(lg) {
-            clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-        }
-        @include respond(phone) {
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-        }
-    }
-    &--2 {
-        padding: 15.1vh 1rem;
-        background-image: linear-gradient(to right top, rgba(59, 59, 59, 1), rgba(39, 39, 39, .75)), url('../img/skewed-img2.jpg');
-        clip-path: polygon(0 80%, 0 0, 100% 20%, 100% 100%);
-        @include respond(lg) {
-            clip-path: polygon(0 90%, 0% 0%, 100% 10%, 100% 100%);
-        }
-        @include respond(phone) {
-            clip-path: polygon(0 100%, 0% 0%, 100% 0, 100% 100%);
-        }
-    }
-}
-
-/* NEIGHBORHOOD SECTION  */
-
-.neighborhood {
-    padding: 17rem 0 10rem;
-    position: relative;
-    z-index: 0;
-    &::after {
-        content: "";
+    
+    &__overlay {
         position: absolute;
-        width: 50%;
-        height: 100%;
+        background-color: rgba(0, 0, 0, .6);
         top: 0;
         right: 0;
-        opacity: 1;
-        clip-path: polygon(0 100%, 0 0, 100% 0%, 100% 100%);
-        background-image: url("../img/shapely-img.jpg");
-        background-size: cover;
-        background-position: left;
-        -webkit-filter: sepia(1);
-        filter: sepia(1);
-        @include respond (phone) {
-            width: 100%;
-            opacity: .1;
-        }
-    }
-    h3 {
-        color: $color-primary-dark;
-        position: relative;
-    }
-    ul {
+        width: 30%;
+        height: 100%;
+        z-index: 4;
         display: flex;
-        flex-flow: column;
-        align-items: flex-start;
-        font-size: 1.8rem;
-        font-family: $secondary-font;
-        list-style: none;
-        margin-top: 4rem;
-        margin-left: 4rem;
-        @include respond(lg) {
-            margin-left: 5.5rem;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: stretch;
+        
+        h1 {
+            color: white;
+            font-size: 2.4rem;
+            opacity: 0.5;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
+                opacity: 1;
+            }
+
+            &:last-child {
+                opacity: 1;
+                background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
+            }
         }
     }
-    li:not(:last-child) {
-        margin-bottom: 1.5rem;
+
+    &__pickerbody {
+        margin-top: -35rem;
     }
-    li {
-        position: relative;
-        &:before {
-            content: "";
-            position: absolute;
-            left: -20px;
-            bottom: 12px;
-            width: 8px;
-            height: 3px;
-            background-color: $color-orange-light;
+
+    &--floorplans {
+        height: 75vh;
+    }
+
+    &__floorplans-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        position: absolute;
+        color: white;
+        background-color: rgba(0, 0, 0, .6);
+        bottom: 30.5%;
+        z-index: 39;
+        width: 70%;
+        padding: 5rem;
+
+        h3 {
+            margin-bottom: 1rem;
+            font-size: 3.6rem;
+        }
+
+        h4 {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            max-width: 66%;
+        }
+
+        img { 
+            height: 25rem;
+            width: auto;
+            opacity: .8;
         }
     }
+
+
+    &__block {
+        max-width: 84rem;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        h3 {
+            font-size: 4.4rem;
+            color: #707070;
+        }
+        
+        p {
+            color: #707070;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            max-width: 90%;
+        }
+    }
+
+    &__flex {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+
+    &__child {
+        background-position: center;
+        background-size: cover;
+        flex: 1 1 50%;
+        height: 50vh;
+
+    }
+
 }
 
-.col-height.amen-img {
-    background-image: url('../img/neighborhood-img.jpg');
-    background-position: center;
-    background-size: cover;
-    max-width: 100%;
-    height: 100%;
-    box-shadow: 0px 25px 40px rgba(0, 0, 0, .40);
-    clip-path: polygon(0 100%, 0 0, 100% 20%, 100% 100%);
-}
+
 
 /* FOOTER -------------------------------------------------- */
 
@@ -187,6 +164,7 @@
     border-bottom: 1px solid $color-grey;
     h3 {
         font-size: 2.8rem;
+        color: white;
     }
 }
 

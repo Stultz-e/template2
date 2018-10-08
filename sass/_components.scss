@@ -15,7 +15,7 @@
 }
 
 .navbar-nav {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     @include respond (lg) {
         background-color: rgba($color: #000000, $alpha: .60);
         margin-top: .5rem;
@@ -35,7 +35,6 @@
 .navbar a {
     font-size: 1.6rem;
     text-transform: uppercase;
-    color: $color-primary;
     font-family: $secondary-font;
     font-weight: 400;
     transition: transform .3s ease-in-out;
@@ -55,17 +54,7 @@
 /* BUTTON INLINE  */
 
 .btn {
-    border: none;
-    color: $color-primary;
-    font-style: $secondary-font;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    border-bottom: 2px solid $color-orange-light;
-    display: inline-block;
-    cursor: pointer;
-    transition: padding .3s ease-out;
-    padding-left: .3rem;
-    padding-right: .3rem;
+
     @include respond(tab-port) {
         padding: 3rem 0 0 0;
     }
@@ -81,30 +70,11 @@
         }
     }
     &--tourbox {
-        position: absolute;
-        top: 150%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        border-bottom: 2px solid $color-orange-light;
-        border-left: 2px solid transparent;
-        border-right: 2px solid transparent;
-        border-top: 2px solid transparent;
-        transition: border .3s ease-in, padding .3s ease-out;
         &:hover {
-            border-left: 2px solid $color-orange-light;
-            border-right: 2px solid $color-orange-light;
-            border-top: 2px solid $color-orange-light;
-            border-bottom: 2px solid $color-orange-light;
-            background-color: rgba($color: #000000, $alpha: .40);
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            padding-right: 5rem;
-            padding-left: 5rem;
+
         }
     }
     &--cards {
-        color: $color-primary-dark;
         &:hover {
             color: $color-grey;
         }
