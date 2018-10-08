@@ -133,6 +133,9 @@ h6 {
 .container {
   max-width: 120rem; }
 
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.5) !important; }
+
 /* CTA SECTION  */
 .cta {
   height: 100vh;
