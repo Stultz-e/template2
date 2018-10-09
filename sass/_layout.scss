@@ -3,7 +3,7 @@
 }
 
 .bg-dark {
-background-color: rgba(0, 0, 0, 0.5)!important; 
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 /* CTA SECTION  */
@@ -28,98 +28,9 @@ background-color: rgba(0, 0, 0, 0.5)!important;
     height: 100vh;
     width: 100%;
     position: relative;
-
     &--paragraph {
         height: 50vh;
     }
-
-    &--floorpicker {
-        height: 100vh;
-        background-image: url(/img/cta-img.png);
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        position: relative;
-    }
-
-    
-    &__overlay {
-        position: absolute;
-        background-color: rgba(0, 0, 0, .6);
-        top: 0;
-        right: 0;
-        width: 30%;
-        height: 100%;
-        z-index: 4;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: stretch;
-        
-        h1 {
-            color: white;
-            font-size: 2.4rem;
-            opacity: 0.5;
-            padding: 2rem;
-            cursor: pointer;
-            transition: all .3s ease-in-out;
-
-            &:hover {
-                background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
-                opacity: 1;
-            }
-
-            &:last-child {
-                opacity: 1;
-                background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
-            }
-        }
-    }
-
-    &__pickerbody {
-        margin-top: -35rem;
-    }
-
-    &--floorplans {
-        height: 75vh;
-    }
-
-    &__floorplans-inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;  
-        position: absolute;
-        color: white;
-        background-color: rgba(0, 0, 0, .6);
-        bottom: 30.5%;
-        z-index: 39;
-        width: 70%;
-        padding: 5rem;
-
-        h3 {
-            margin-bottom: 1rem;
-            font-size: 3.6rem;
-        }
-
-        h4 {
-            color: white;
-            font-size: 1.8rem;
-        }
-
-        p {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-            max-width: 66%;
-        }
-
-        img { 
-            height: 25rem;
-            width: auto;
-            opacity: .8;
-        }
-    }
-
-
     &__block {
         max-width: 84rem;
         margin: auto;
@@ -132,7 +43,6 @@ background-color: rgba(0, 0, 0, 0.5)!important;
             font-size: 4.4rem;
             color: #707070;
         }
-        
         p {
             color: #707070;
             font-size: 1.5rem;
@@ -140,24 +50,118 @@ background-color: rgba(0, 0, 0, 0.5)!important;
             max-width: 90%;
         }
     }
-
     &__flex {
         width: 100%;
         display: flex;
         flex-flow: row wrap;
-
     }
-
     &__child {
         background-position: center;
         background-size: cover;
         flex: 1 1 50%;
         height: 50vh;
-
     }
-
 }
 
+.floorpicker {
+    height: 100vh;
+    background-image: url(/img/cta-img.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    &__overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, .6);
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100%;
+        z-index: 4;
+    }
+    &__pickerwrapper {
+        margin-top: 20%;
+    }
+}
+
+.level {
+    display: flex;
+    flex-flow: column nowrap;
+    &--active a {
+        opacity: 1;
+        background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 1));
+    }
+    a {
+        color: #fff;
+        font-size: 2.4rem;
+        opacity: 0.5;
+        padding: 2rem;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
+            opacity: 1;
+        }
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-flow: column;
+        color: rgba(255, 255, 255, 0.7);
+        li {
+            font-size: 1.6rem;
+            padding: .5rem 0 .5rem 2.4rem;
+            transition: .3s;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(0, 0, 0, .3);
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+}
+
+.side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, .6);
+    height: 75vh;
+    z-index: 39;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-71.46%, -50%);
+    transform: translate(-71.46%, -50%);
+    padding: 5rem;
+    opacity: 0;
+    transition: .3s ease-in-out;
+
+    h3 {
+        margin-bottom: 1rem;
+        font-size: 3.6rem;
+    }
+    h4 {
+        color: white;
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        max-width: 69%;
+    }
+    img {
+        height: auto;
+        width: 100rem;
+        opacity: .9;
+    }
+}
+
+.active {
+    opacity: 1;
+}
 
 
 /* FOOTER -------------------------------------------------- */

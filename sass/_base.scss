@@ -47,17 +47,6 @@
     }
 }
 
-:root {
-    --color-primary: #F6F6F6;
-    --color-primary-dark: #484848;
-    --color-orange-light: #FFA100;
-    --color-orange-dark: #CE8C1B;
-    --color-grey:#6B6B6B;
-    --shadow-dark: 0 2.5rem 4rem rgba(0, 0, 0, .4);
-    --shadow-light: 0 3px 4rem rgba(0, 0, 0, .16);
-    --secondary-font: 'Titillium Web', sans-serif;
-}
-
 $color-primary: #F6F6F6;
 $color-primary-dark: #484848;
 $color-orange-light: #FFA100;
@@ -93,22 +82,28 @@ html {
     }
 }
 
-a,
-a:link,
-a:visited {
-    text-decoration: none;
-    color: $color-primary;
-    &:hover {
-        color: darken($color-primary, 15%);
-        text-decoration: none;
-    }
-}
-
 body {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 300;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+}
+
+button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, .7);
+    border: none;
+    cursor: pointer;
+
+
+    &:hover {
+        color: rgba(255, 255, 255, 1);  
+    }
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
 }
 
 /* FONTS */
@@ -212,3 +207,6 @@ h6 {
     background: #1b5187;
     color: #fff;
 }
+
+/* JAVASCRIPT COMMANDS ~ OR WHATEVER.*/
+

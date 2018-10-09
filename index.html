@@ -15,7 +15,6 @@
 
 <body>
     <section class="cta">
-
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -81,11 +80,9 @@
     <section class="content">
         <div class="content__flex">
             <div class="content__child amenities" style="background-image: url(/img/Amenities.png)">
-
             </div>
 
             <div class="content__child floorplans" style="background-image: url(/img/floorplans.png)">
-
             </div>
 
             <div class="content__child neighborhood" style="background-image: url(/img/neigborhood.png)">
@@ -93,7 +90,6 @@
             </div>
 
             <div class="content__child gallery" style="background-image: url(/img/Gallery.png)">
-
             </div>
         </div>
     </section>
@@ -104,55 +100,96 @@
             <div class="content__block">
                 <h3>Become A Tourist In Your Own City</h3>
                 <p>Ranked by Travel + Leisure poll as one of "America's Favorite Cities" - New Orleans has many major
-                    attractions
-                    from the world-renowned French Quarter to the notorious Bourbon Street. Although The Metro
-                    Apartments
-                    offers exceptional amenities and customer service, we realize that you are in the middle of a
-                    thriving,
-                    flourishing southern metropolis. Our location allows direct access to Interstate 10, which makes
-                    the
-                    trip to all of the downtown eateries, shopping opportunities, and thriving nightlife
-                    easily-accessible
-                    for our residents. Enjoy all of the major attractions that New Orleans has to offer from Jackson
-                    Square
-                    and the French Market (which includes the famous Café du Monde) to Preservation Hall and the
-                    National
-                    World War II Museum.</p>
+                attractions
+                from the world-renowned French Quarter to the notorious Bourbon Street. Although The Metro
+                Apartments
+                offers exceptional amenities and customer service, we realize that you are in the middle of a
+                thriving,
+                flourishing southern metropolis. Our location allows direct access to Interstate 10, which makes
+                the
+                trip to all of the downtown eateries, shopping opportunities, and thriving nightlife
+                easily-accessible
+                for our residents. Enjoy all of the major attractions that New Orleans has to offer from Jackson
+                Square
+                and the French Market (which includes the famous Café du Monde) to Preservation Hall and the
+                National
+                World War II Museum.</p>
             </div>
         </div>
     </section>
 
-    <section class="content content content--floorpicker" id="slide1">
-        <div class="content__overlay">
-            <div class="content__pickerbody">
-
-                    <h1 class="floorpicker"> LEVEL 4 </h1>
-                    <h1 class="floorpicker"> LEVEL 3 </h1>
-                    <h1 class="floorpicker"> LEVEL 2 </h1>
-                    <h1 class="floorpicker active"> LEVEL 1 </h1>
-            </div>
-        </div>
-
-        <div class="content__floorplans-inner">
-                <div class="content__text-body">
-                    <h3>Level 1</h3>
-                    <div class="content__details">
-                        <h3>Midcity | $665.00 - $995.00</h3>
-                        <h4>1 Bed 1 Bath 597 Square Feet $300.00 - $350.00 Deposit</h4>
-                        <p>FEATURES: This floor plan include energy-efficient, stainless steel appliances,
-                            soaring nine foot ceilings with elegant crown molding, and a personal full size
-                            washer and dryer.</p>
-                    </div>
+    <section class="floorpicker">
+                <div class="side" id="aptOne">
+            <div class="side__text-body">
+                <h3>101</h3>
+                <div class="side__details">
+                    <h3> $665.00 - $995.00</h3>
+                    <h4>1 Bed 1 Bath 597 Square Feet</h4>
+                    <p>FEATURES:
+                        <br>This floor plan include energy-efficient, stainless steel appliances,
+                        soaring nine foot ceilings with elegant crown molding, and a personal full size
+                        washer and dryer.</p>
                 </div>
-    
-                <img src="/img/floorplan.png" alt="floorplan">
             </div>
+            <img class="img-shift" src="/img/floor1.svg" alt="floorplan">
+        </div>
+        <div class="floorpicker__overlay">
+        <div class="floorpicker__pickerwrapper">
 
+        <div class="level">
+            <a class="level__floorlink" data-toggle="collapse" href="#levelFour" role="button" aria-expanded="false"
+                aria-controls="collapseExample"> LEVEL 4 </a>
+            <div class="collapse" id="levelFour">
+                <ul class="level__apt">
+                    <li>Apartment Four</li>
+                    <li>Apartment Four</li>
+                    <li>Apartment Four</li>
+                    <li>Apartment Four</li>
+                </ul>
+            </div>
+        </div>
 
-    </section>
+        <div class="level">
+            <a class="level__link" data-toggle="collapse" href="#levelThree" role="button" aria-expanded="false"
+                aria-controls="collapseExample"> LEVEL 3 </a>
+            <div class="collapse" id="levelThree">
+                <ul class="level__apt">
+                    <li>Apartment Three</li>
+                    <li>Apartment Three</li>
+                    <li>Apartment Three</li>
+                    <li>Apartment Three</li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="level">
+            <a class="level__link" data-toggle="collapse" href="#levelTwo" role="button" aria-expanded="false"
+                aria-controls="collapseExample"> LEVEL 2 </a>
+            <div class="collapse" id="levelTwo">
+                <ul class="level__apt">
+                    <li>Apartment Two</li>
+                    <li>Apartment Two</li>
+                    <li>Apartment Two</li>
+                    <li>Apartment Two</li>
+                </ul>
+            </div>
+        </div>
 
-
+        <div class="level level--active">
+            <a class="level____link" data-toggle="collapse" href="#levelOne" role="button" aria-expanded="false"
+                aria-controls="collapseExample"> LEVEL 1 </a>
+            <div class="collapse" id="levelOne">
+                <ul class="level____apt">
+                    <li><button id="btnApt4">109</button></li>
+                    <li><button id="btnApt3">106</button></li>
+                    <li><button id="btnApt2">104</button></li>
+                    <li><button id="btnApt1">101</button></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+</div>
+</section> <!-- floorpicker end -->
 
     <section class="location">
         <div class="container">
@@ -272,68 +309,6 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         </script>
 </body>
