@@ -1,4 +1,11 @@
 /* CUSTOM BREAKPOINTS */
+a {
+  color: #fff;
+  transition: all .3s; }
+  a:hover {
+    color: rgba(255, 255, 255, 0.658);
+    text-decoration: none; }
+
 * {
   margin: 0;
   padding: 0;
@@ -31,9 +38,10 @@ button {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.7);
   border: none;
-  cursor: pointer; }
-  button:hover {
-    color: white; }
+  cursor: pointer;
+  /*     &:hover {
+        color: rgba(255, 255, 255, 1);  
+    } */ }
   button:focus {
     border: none;
     outline: none; }
@@ -186,7 +194,7 @@ h6 {
     background-color: rgba(0, 0, 0, 0.6);
     top: 0;
     right: 0;
-    width: 30%;
+    width: 25%;
     height: 100%;
     z-index: 4; }
   .floorpicker__pickerwrapper {
@@ -195,50 +203,57 @@ h6 {
 .level {
   display: flex;
   flex-flow: column nowrap; }
-  .level--active a {
-    opacity: 1;
-    background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), #e4b100); }
-  .level a {
+  .level__btn {
     color: #fff;
     font-size: 2.4rem;
     opacity: 0.5;
     padding: 2rem;
     text-decoration: none;
+    text-align: left;
     transition: all .3s ease-in-out; }
-    .level a:hover {
+    .level__btn:active {
       background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
       opacity: 1; }
-  .level ul {
-    list-style: none;
-    display: flex;
-    flex-flow: column;
-    color: rgba(255, 255, 255, 0.7); }
-    .level ul li {
-      font-size: 1.6rem;
-      padding: .5rem 0 .5rem 2.4rem;
-      transition: .3s;
-      cursor: pointer; }
-      .level ul li:hover {
-        background-color: rgba(0, 0, 0, 0.3);
-        color: white; }
+    .level__btn:hover {
+      background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
+      opacity: .6; }
 
 .side {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
   position: absolute;
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
-  height: 75vh;
+  height: 100vh;
   z-index: 39;
-  width: 70%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-71.46%, -50%);
-  transform: translate(-71.46%, -50%);
-  padding: 5rem;
+  width: 75%;
   opacity: 0;
   transition: .3s ease-in-out; }
+  .side .legend {
+    display: flex;
+    margin-top: 5rem;
+    margin-left: .8rem;
+    align-items: center;
+    max-width: 75%;
+    justify-content: space-between; }
+    .side .legend__boxbox {
+      display: flex; }
+    .side .legend__box {
+      width: 4rem;
+      height: 3rem; }
+      .side .legend__box--onebed {
+        background-color: #cd6c32; }
+      .side .legend__box--twobed {
+        background-color: #2f398e; }
+      .side .legend__box--amenities {
+        background-color: #7e7e7e; }
+    .side .legend__title {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-top: .7rem; }
   .side h3 {
     margin-bottom: 1rem;
     font-size: 3.6rem; }
@@ -249,12 +264,55 @@ h6 {
     font-size: 1.5rem;
     margin-top: 2rem;
     max-width: 69%; }
-  .side img {
+
+.image-area {
+  position: relative; }
+  .image-area__exit {
+    position: absolute;
+    right: 2rem;
+    top: -6rem;
+    font-size: 4rem;
+    opacity: .6;
+    cursor: pointer;
+    transition: all .1s ease-out; }
+    .image-area__exit:hover {
+      opacity: 1;
+      font-size: 4.5rem; }
+  .image-area__lobby {
     height: auto;
-    width: 100rem;
-    opacity: .9; }
+    width: 70rem;
+    position: relative;
+    z-index: -1; }
+  .image-area__btn {
+    position: absolute;
+    font-size: 1.6rem;
+    top: 3.5rem;
+    left: 3.5rem;
+    z-index: 10; }
+
+.img-101 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 0; }
+
+.show {
+  width: 53rem;
+  z-index: 10;
+  left: -95px;
+  width: 53rem;
+  top: 32px;
+  transition: all .3s ease-out; }
+
+.visible {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4px; }
 
 .active {
+  opacity: 1; }
+
+.active-btn {
+  background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
   opacity: 1; }
 
 /* FOOTER -------------------------------------------------- */

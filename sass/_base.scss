@@ -56,6 +56,15 @@ $shadow-dark:  0 2.5rem 4rem rgba(0, 0, 0, .4);
 $shadow-light: 0 3px 4rem rgba(0, 0, 0, .16);
 $secondary-font: 'Nunito Sans', sans-serif;
 
+a {
+    color: #fff;
+    transition: all .3s;
+
+    &:hover {
+    color: rgba(255, 255, 255, 0.658);
+    text-decoration: none;
+    }
+}
 
 * {
     margin: 0;
@@ -96,9 +105,9 @@ button {
     cursor: pointer;
 
 
-    &:hover {
+/*     &:hover {
         color: rgba(255, 255, 255, 1);  
-    }
+    } */
 
     &:focus {
         border: none;

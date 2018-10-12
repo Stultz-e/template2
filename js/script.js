@@ -1,7 +1,74 @@
-var x = document.getElementById ('btnApt1')
-x.addEventListener ('click', showApt)
+// SHOW SIDE FLOOR PICKER
 
-function showApt() {
-document.getElementById ('aptOne').classList.toggle('active');
+   var x = document.querySelector('.level__btn')
+    x.addEventListener ('click', showApt)
+    
+    function showApt() {
+    document.querySelector ('.side').classList.toggle('active');
+    } 
+    
+    // SHOW FLOOR PLAN PICKER
+    var y = document.querySelector ('.image-area__btn')  
+    y.addEventListener ('click', showFp) 
+    
+    function showFp() {
+        document.querySelector('.image-area__btn').classList.toggle ('visible')
+        document.querySelector('.img-101').classList.toggle('show');
+    }
+ 
+    /* X BUTTON  EXIT */
+   var c = document.querySelector('.image-area__exit')
+    c.addEventListener ('click', hideLevel) 
+    
+    function hideLevel() {
+        document.querySelector('.side').classList.remove('active');
+    }  
+
+// some kinda if statement that highlights the things when the thing is open 
+
+// Get the container element
+var btnContainer = document.getElementById('btnWrap');
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName('level__btn');
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active-btn");
+
+
+    // If there's no active class
+    if (current.length > 0) { 
+      current[0].className = current[0].className.replace(" active-btn", "");
+    }
+
+    // Add the active class to the current/clicked button
+    this.className += " active-btn";
+  });
 }
+
+/* $(function(){
+    $('#btnApt1').on('click', function() {
+        $('#apt1').toggle();
+    });
+
+    $('#btnApt2').on('click', function() {
+        $('#apt2').toggle();
+    });
+
+    $('#btnApt3').on('click', function() {
+        $('#apt3').toggle();
+    });
+
+    $('#btnApt4').on('click', function() {
+        $('#apt4').toggle();
+    });
+
+    $('.image-area__exit').on('click', function() {
+        $(this).closest('item').toggleClass('current'); });
+
+
+ }); */ // end
+
 

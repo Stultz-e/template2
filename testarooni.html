@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,400,600i,700i" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
@@ -122,106 +120,81 @@
 
     <section class="floorpicker">
         <div class="side" id="aptOne">
-            <div class="image-area">
-                <i class="image-area__exit fa fa-times" role="button"></i>
-                <img class="image-area__lobby" src="/img/level1.svg" alt="floorplan">
-                <img class="img-101" src="/img/floorplan.png" id="imageFp1" alt="floorplan">
-                
-                <button class="image-area__btn" id="floorView">101</button>
-                    <div class="legend">
-                        <div class="legend__boxbox">
-                            <div class="legend__box legend__box legend__box--onebed"></div>
-                            <h6 class="legend__title">
-                                1 bedrooom
-                            </h6>
-                        </div>
- 
-                        <div class="legend__boxbox">
-                            <div class="legend__box legend__box--twobed"></div>
-                            <h6 class="legend__title">
-                                2 bedrooom
-                            </h6>
-                        </div>
-
-                        <div class="legend__boxbox">
-                            <div class="legend__box legend__box--amenities"></div>
-                            <h6 class="legend__title">
-                                Amenities
-                            </h6>
-                        </div>
-                    </div>
+            <div class="side__text-body">
+                <h3>101</h3>
+                <div class="side__details">
+                    <h3> $665.00 - $995.00</h3>
+                    <h4>1 Bed 1 Bath 597 Square Feet</h4>
+                    <p>FEATURES:
+                        <br>This floor plan include energy-efficient, stainless steel appliances,
+                        soaring nine foot ceilings with elegant crown molding, and a personal full size
+                        washer and dryer.</p>
                 </div>
             </div>
-
-<!--             <div class="side" id="apt2">
-                    <div class="image-area">
-                        <i class="image-area__exit fa fa-times" role="button"></i>
-                        <img class="image-area__lobby" src="/img/level2.svg" alt="floorplan">
-                        <img class="img-101" src="/img/floorplan.png" id="imageFp2" alt="floorplan">
-                        
-                        <button class="image-area__btn" id="floorView">101</button>
-                            <div class="legend">
-                                <div class="legend__boxbox">
-                                    <div class="legend__box legend__box legend__box--onebed"></div>
-                                    <h6 class="legend__title">
-                                        1 bedrooom
-                                    </h6>
-                                </div>
-         
-                                <div class="legend__boxbox">
-                                    <div class="legend__box legend__box--twobed"></div>
-                                    <h6 class="legend__title">
-                                        2 bedrooom
-                                    </h6>
-                                </div>
-        
-                                <div class="legend__boxbox">
-                                    <div class="legend__box legend__box--amenities"></div>
-                                    <h6 class="legend__title">
-                                        Amenities
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
+            <div class="image-area">
+                <img class="image-area__lobby" src="/img/floor1.svg" alt="floorplan">
+                <img class="img-101" src="/img/floorplan.png" id="imageFp1" alt="floorplan">
+                <button class= "image-area__btn" id="floorView">101</button>
+            </div>
+        </div>
 
         <div class="floorpicker__overlay">
             <div class="floorpicker__pickerwrapper">
-                <div class="level" id="btnWrap">
-                    <button class="level__btn" role="button" aria-expanded="false" id="btnApt4"> LEVEL 4 </button>
-                    <button class="level__btn" role="button"  id="btnApt3"> LEVEL 3 </button>
-                    <button class="level__btn"  role="button"  id="btnApt2"
-                    data-toggle="button" data-target="#apt2"> LEVEL 2 </button>
-                    <button class="level__btn" role="button" id="btnApt1"> LEVEL 1</button>    
+
+                <div class="level">
+                    <a class="level__floorlink" data-toggle="collapse" href="#levelFour" role="button" aria-expanded="false"
+                        aria-controls="collapseExample"> LEVEL 4 </a>
+                    <div class="collapse" id="levelFour">
+                        <ul class="level__apt">
+                            <li>Apartment Four</li>
+                            <li>Apartment Four</li>
+                            <li>Apartment Four</li>
+                            <li>Apartment Four</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="level">
+                    <a class="level__link" data-toggle="collapse" href="#levelThree" role="button" aria-expanded="false"
+                        aria-controls="collapseExample"> LEVEL 3 </a>
+                    <div class="collapse" id="levelThree">
+                        <ul class="level__apt">
+                            <li>Apartment Three</li>
+                            <li>Apartment Three</li>
+                            <li>Apartment Three</li>
+                            <li>Apartment Three</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="level">
+                    <a class="level__link" data-toggle="collapse" href="#levelTwo" role="button" aria-expanded="false"
+                        aria-controls="collapseExample"> LEVEL 2 </a>
+                    <div class="collapse" id="levelTwo">
+                        <ul class="level__apt">
+                            <li>Apartment Two</li>
+                            <li>Apartment Two</li>
+                            <li>Apartment Two</li>
+                            <li>Apartment Two</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="level level--active">
+                    <a class="level____link" data-toggle="collapse" href="#levelOne" role="button" aria-expanded="false"
+                        aria-controls="collapseExample"> LEVEL 1 </a>
+                    <div class="collapse" id="levelOne">
+                        <ul class="level____apt">
+                            <li><button id="btnApt4">109</button></li>
+                            <li><button id="btnApt3">106</button></li>
+                            <li><button id="btnApt2">104</button></li>
+                            <li><button id="btnApt1">101</button></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section> <!-- floorpicker end -->
-
-
-    <section class="content content--paragraph">
-        <div class="container">
-            <div class="content__block">
-                <h3>Become A Tourist In Your Own City</h3>
-                <p>Ranked by Travel + Leisure poll as one of "America's Favorite Cities" - New Orleans has many major
-                    attractions
-                    from the world-renowned French Quarter to the notorious Bourbon Street. Although The Metro
-                    Apartments
-                    offers exceptional amenities and customer service, we realize that you are in the middle of a
-                    thriving,
-                    flourishing southern metropolis. Our location allows direct access to Interstate 10, which makes
-                    the
-                    trip to all of the downtown eateries, shopping opportunities, and thriving nightlife
-                    easily-accessible
-                    for our residents. Enjoy all of the major attractions that New Orleans has to offer from Jackson
-                    Square
-                    and the French Market (which includes the famous Café du Monde) to Preservation Hall and the
-                    National
-                    World War II Museum.</p>
-            </div>
-        </div>
-    </section>
 
     <section class="location">
         <div class="container">
@@ -296,6 +269,7 @@
                         <image xlink:href="../img/icon.svg" src="icon" width="37" height="37" />
                     </svg>
 
+
                     <p class="10xrjargon">Floor Plan square footage, layouts, and measurements listed on this page are
                         an
                         approximation for illustrative purposes only. Floor Plans are subject to vary between
@@ -309,11 +283,11 @@
                         qualifying standards. Occupancy guidelines will apply. The information listed on this page is
                         to
                         be used as a point of reference and is not a binding agreement.</p>
+
                 </div>
             </div>
         </section>
     </footer>
-
     <section class="legal-jargon">
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center">
@@ -330,9 +304,19 @@
 
     <script src="/js/wow.js"></script>
     <script src="/js/script.js"></script>
-    <script>new WOW().init();</script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous">
+
+
+
+        </script>
 </body>
+
 </html>
