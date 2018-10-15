@@ -54,29 +54,10 @@
 /* BUTTON INLINE  */
 
 .btn {
-
-    @include respond(tab-port) {
-        padding: 3rem 0 0 0;
-    }
-    &:hover {
-        padding-right: 3rem;
-        padding-left: 3rem;
-    }
-    &--retainp {
-        align-self: center;
-        margin-right: 15rem;
-        @include respond(tab-port) {
-            padding: 10rem 0 0 0;
-        }
-    }
-    &--tourbox {
-        &:hover {
-
-        }
-    }
-    &--cards {
-        &:hover {
-            color: $color-grey;
-        }
-    }
+    text-transform: uppercase;
+    padding: 1rem 4rem;
+    background-color: orangered;
+    color: white;
+    display: inline-block;
+    font-size: 1.8rem;
 }
