@@ -56,8 +56,18 @@
 .btn {
     text-transform: uppercase;
     padding: 1rem 4rem;
-    background-color: orangered;
-    color: white;
     display: inline-block;
     font-size: 1.8rem;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+
+    &--modal {
+       margin-top: 5rem; 
+    }
+
+    &--modal-left {
+        margin-left: 4rem;
+        margin-top: 5rem; 
+    }
 }

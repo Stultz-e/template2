@@ -154,7 +154,7 @@ h6 {
   width: 100%;
   position: relative; }
   .content p {
-    color: #707070;
+    color: #212529;
     font-size: 1.7rem;
     margin-top: 2rem; }
   .content--paragraph {
@@ -171,7 +171,7 @@ h6 {
         padding: 8rem 2rem; } }
     .content--amenities h3 {
       font-size: 4.4rem;
-      color: #707070;
+      color: #212529;
       /*   IMAGE SHRINKAGE  */
       /*   IMAGE SHRINKAGE  */ }
       @media (max-width: 62em) {
@@ -183,7 +183,7 @@ h6 {
           /* 600 / 16 */
           font-size: 2.2rem; } }
     .content--amenities p {
-      color: #707070;
+      color: #212529;
       font-size: 1.8rem;
       margin-top: 2rem; }
     .content--amenities ul {
@@ -208,7 +208,7 @@ h6 {
     margin: auto; }
     .content__block h3 {
       font-size: 4.4rem;
-      color: #707070;
+      color: #212529;
       /*   IMAGE SHRINKAGE  */
       /*   IMAGE SHRINKAGE  */ }
       @media (max-width: 62em) {
@@ -270,8 +270,45 @@ h6 {
     width: 25%;
     height: 100%;
     z-index: 4; }
+  .floorpicker__slide {
+    position: absolute;
+    /* top: 20%; */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    /*   IMAGE SHRINKAGE  */ }
+    @media (max-width: 62em) {
+      .floorpicker__slide {
+        flex-flow: column nowrap; } }
+    .floorpicker__slide h1 {
+      font-size: 4.4rem;
+      color: #fff; }
+    .floorpicker__slide h3 {
+      font-size: 2.2rem;
+      color: #fff; }
+    .floorpicker__slide p {
+      font-size: 1.6rem;
+      max-width: 80%;
+      color: #fff;
+      /*   IMAGE SHRINKAGE  */ }
+      @media (max-width: 62em) {
+        .floorpicker__slide p {
+          max-width: 100%; } }
+    .floorpicker__slide__textbody {
+      flex: 0 1 50%; }
+    .floorpicker__slide img {
+      flex: 0 1 50%;
+      height: 42rem;
+      opacity: 1; }
   .floorpicker__pickerwrapper {
-    margin-top: 20%; }
+    margin-top: 30%; }
 
 .level {
   display: flex;
@@ -370,7 +407,8 @@ h6 {
   position: absolute;
   top: 0;
   left: 100%;
-  width: 0; }
+  width: 100%;
+  /* width: 0; */ }
 
 .show {
   width: 53rem;
@@ -523,7 +561,13 @@ footer {
 .btn {
   text-transform: uppercase;
   padding: 1rem 4rem;
-  background-color: orangered;
-  color: white;
   display: inline-block;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff; }
+  .btn--modal {
+    margin-top: 5rem; }
+  .btn--modal-left {
+    margin-left: 4rem;
+    margin-top: 5rem; }
