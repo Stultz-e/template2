@@ -155,7 +155,7 @@ h6 {
   position: relative; }
   .content p {
     color: #707070;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin-top: 2rem; }
   .content--paragraph {
     padding: 13rem 0;
@@ -309,7 +309,7 @@ h6 {
     margin-top: 5rem;
     margin-left: .8rem;
     align-items: center;
-    max-width: 75%;
+    max-width: 100%;
     justify-content: space-between; }
     .side .legend__boxbox {
       display: flex; }
@@ -317,9 +317,11 @@ h6 {
       width: 4rem;
       height: 3rem; }
       .side .legend__box--onebed {
-        background-color: #b4aeba; }
-      .side .legend__box--twobed {
         background-color: #ebc63f; }
+      .side .legend__box--twobed {
+        background-color: #d8c291; }
+      .side .legend__box--threebed {
+        background-color: #b4aeba; }
       .side .legend__box--amenities {
         background-color: #e6e6e6; }
     .side .legend__title {
@@ -339,7 +341,8 @@ h6 {
     max-width: 69%; }
 
 .image-area {
-  position: relative; }
+  position: relative;
+  opacity: .9; }
   .image-area__exit {
     position: absolute;
     right: 2rem;

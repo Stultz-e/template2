@@ -30,7 +30,7 @@
 
     p {
         color: #707070;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         margin-top: 2rem;
     }
 
@@ -221,7 +221,7 @@
     margin-top: 5rem;
     margin-left: .8rem;
     align-items: center;
-    max-width: 75%;
+    max-width: 100%;
     justify-content: space-between;
     
 
@@ -234,12 +234,16 @@
         height: 3rem;
 
         &--onebed {
-            background-color: #b4aeba; 
+            background-color: #ebc63f; 
         }
 
         &--twobed {
-        background-color: #ebc63f;
+        background-color: #d8c291 ;
         }
+
+        &--threebed {
+            background-color: #b4aeba;
+            }
 
         &--amenities {
             background-color: #e6e6e6;
@@ -271,6 +275,7 @@
 
 .image-area {
     position: relative;
+    opacity: .9;
 
     &__exit {
        position: absolute; 
