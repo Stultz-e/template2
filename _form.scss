@@ -1,19 +1,24 @@
 
     .app-form {
         background-color: orangered;
+        width: 100%;
 
     
         form {
+            margin: auto;
             display: flex;
-            flex-flow: column nowrap;
+            flex-flow: row wrap;
             align-items: center;
-            background-color: orangered;
-            width: 100%;
+            justify-content: space-between;
+            max-width: 60%;
         }
 
 
         input {
-            flex: 1 1 50%;
+            flex: 0 0 50%;
+            display: inline-block;
+            padding: .5rem 0 1rem .5rem;
+            font-size: 1.8rem;
         }
     }
 
