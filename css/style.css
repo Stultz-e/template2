@@ -129,6 +129,37 @@ h6 {
   color: #fff; }
 
 /* JAVASCRIPT COMMANDS ~ OR WHATEVER.*/
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.rotating {
+  -webkit-animation: rotating 30s linear infinite;
+  -moz-animation: rotating 30s linear infinite;
+  -ms-animation: rotating 30s linear infinite;
+  -o-animation: rotating 30s linear infinite;
+  animation: rotating 20s linear infinite; }
+
 .container {
   max-width: 120rem; }
 
@@ -270,45 +301,72 @@ h6 {
     width: 25%;
     height: 100%;
     z-index: 4; }
-  .floorpicker__slide {
-    position: absolute;
-    /* top: 20%; */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 40;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    /*   IMAGE SHRINKAGE  */ }
-    @media (max-width: 62em) {
-      .floorpicker__slide {
-        flex-flow: column nowrap; } }
-    .floorpicker__slide h1 {
-      font-size: 4.4rem;
-      color: #fff; }
-    .floorpicker__slide h3 {
-      font-size: 2.2rem;
-      color: #fff; }
-    .floorpicker__slide p {
-      font-size: 1.6rem;
-      max-width: 80%;
-      color: #fff;
-      /*   IMAGE SHRINKAGE  */ }
-      @media (max-width: 62em) {
-        .floorpicker__slide p {
-          max-width: 100%; } }
-    .floorpicker__slide__textbody {
-      flex: 0 1 50%; }
-    .floorpicker__slide img {
-      flex: 0 1 50%;
-      height: 42rem;
-      opacity: 1; }
   .floorpicker__pickerwrapper {
     margin-top: 30%; }
+
+.slide {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  display: none;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-left: 10%;
+  overflow: hidden;
+  /*   IMAGE SHRINKAGE  */ }
+  @media (max-width: 62em) {
+    .slide {
+      flex-flow: column nowrap;
+      justify-content: center; } }
+  .slide__btn-group {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 5rem; }
+  .slide__textbody {
+    flex: 0 0 50%;
+    position: relative;
+    /*   IMAGE SHRINKAGE  */ }
+    .slide__textbody:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 200%;
+      height: 150%;
+      z-index: -1; }
+    @media (max-width: 62em) {
+      .slide__textbody {
+        flex-flow: column nowrap;
+        justify-content: center;
+        flex: 0 0 auto; } }
+    .slide__textbody h1 {
+      font-size: 4.4rem;
+      color: #fff;
+      margin-bottom: 2rem; }
+    .slide__textbody h3 {
+      font-size: 2.2rem;
+      color: #fff; }
+    .slide__textbody p {
+      font-size: 1.6rem;
+      max-width: 80%;
+      color: #fff; }
+  .slide__img {
+    flex: 0 1 100rem;
+    opacity: .8;
+    position: relative;
+    /*   IMAGE SHRINKAGE  */ }
+    .slide__img img {
+      max-width: 100%;
+      height: auto; }
+    @media (max-width: 62em) {
+      .slide__img {
+        flex: 0 0 auto; } }
 
 .level {
   display: flex;
@@ -407,8 +465,7 @@ h6 {
   position: absolute;
   top: 0;
   left: 100%;
-  width: 100%;
-  /* width: 0; */ }
+  width: 0; }
 
 .show {
   width: 53rem;
@@ -424,6 +481,9 @@ h6 {
 
 .active {
   opacity: 1; }
+
+.dflex {
+  display: flex; }
 
 .active-btn {
   background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
@@ -567,7 +627,17 @@ footer {
   color: #fff;
   border: 1px solid #fff; }
   .btn--modal {
-    margin-top: 5rem; }
-  .btn--modal-left {
-    margin-left: 4rem;
-    margin-top: 5rem; }
+    margin-right: 5rem; }
+    .btn--modal i {
+      margin-right: 8px; }
+
+.app-form {
+  background-color: orangered; }
+  .app-form form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: orangered;
+    width: 100%; }
+  .app-form input {
+    flex: 1 1 50%; }

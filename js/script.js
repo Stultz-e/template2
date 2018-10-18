@@ -12,8 +12,8 @@
     y.addEventListener ('click', showFp) 
     
     function showFp() {
-        document.querySelector('.image-area__btn').classList.toggle ('visible')
-        document.querySelector('.img-101').classList.toggle('show');
+        document.querySelector('.slide').classList.toggle('dflex');
+        hideLevel();
     }
  
     /* X BUTTON  EXIT */
@@ -23,6 +23,26 @@
     function hideLevel() {
         document.querySelector('.side').classList.remove('active');
     }  
+
+    var back = document.querySelector('.btn--modal')
+    back.addEventListener ('click', retrieveFplate) 
+    
+    function retrieveFplate() {
+        document.querySelector('.slide').classList.toggle('dflex');
+        showApt();
+    }  
+
+    var applyNow = document.querySelector('.btn--modal-left')
+    applyNow.addEventListener ('click', formSlide) 
+    
+    function formSlide() {
+        document.querySelector('.slide').classList.toggle('dflex');
+        showApt();
+    }  
+
+
+
+
 
 // some kinda if statement that highlights the things when the thing is open 
 
