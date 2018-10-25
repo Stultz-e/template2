@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55.45 55.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 5px;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="27.72" cy="27.72" r="25.22" gradientUnits="userSpaceOnUse">
+      <stop offset="0.04" stop-color="#ffff54"/>
+      <stop offset="0.16" stop-color="#cff144"/>
+      <stop offset="0.34" stop-color="#91df30"/>
+      <stop offset="0.5" stop-color="#5dcf1f"/>
+      <stop offset="0.65" stop-color="#35c311"/>
+      <stop offset="0.79" stop-color="#18bb08"/>
+      <stop offset="0.91" stop-color="#06b602"/>
+      <stop offset="1" stop-color="#00b400"/>
+    </radialGradient>
+  </defs>
+  <title>available</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <circle class="cls-1" cx="27.72" cy="27.72" r="25.22"/>
+        <circle class="cls-2" cx="27.72" cy="27.72" r="25.22"/>
+        <circle class="cls-3" cx="27.72" cy="27.72" r="25.22"/>
+      </g>
+    </g>
+  </g>
+</svg>

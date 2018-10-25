@@ -3,7 +3,9 @@
 }
 
 .bg-dark {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background: -webkit-linear-gradient(180deg, $color-light, $color-light);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(180deg, $color-light, $color-light) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /* CTA SECTION  */
@@ -144,7 +146,7 @@
         background-color: rgba(0, 0, 0, .6);
         top: 0;
         right: 0;
-        width: 25%;
+        width: 18%;
         height: 100%;
         z-index: 4;
     }
@@ -154,9 +156,12 @@
     }
 }
 
+// FLOORPLAN INSIDE DETAILS
+
 .slide {
     position: absolute;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -165,7 +170,18 @@
     flex-flow: row nowrap;
     align-items: center;
     padding-left: 10%;
-    overflow: hidden;
+    padding-right: 10%;
+
+    &__exit {
+        cursor: pointer;
+        font-size: 5rem;
+        color: #fff;
+        position: absolute;
+        top: -10rem;
+        right: 0;
+    }
+ 
+
     @include respond (lg) {
         flex-flow: column nowrap;
         justify-content: center;
@@ -174,25 +190,13 @@
     &__btn-group {
         display: flex;
         flex-flow: row nowrap;
-        margin-top: 5rem;
+        margin-top: 6rem;
     }
 
     &__textbody {
         flex: 0 0 50%;
         position: relative;
 
-        &:before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, .5);
-            width: 200%;
-            height: 150%;
-            z-index: -1;
-        }
 
         @include respond (lg) {
             flex-flow: column nowrap;
@@ -201,13 +205,17 @@
         }
 
         h1 {
-            font-size: 4.4rem;
+            font-size: 3.6rem;
             color: #fff;
             margin-bottom: 2rem;
         }
         h3 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: #fff;
+            
+            &:not(:last-child) {
+                margin-bottom: 1.3rem;
+            }
         }
         p {
             font-size: 1.6rem;
@@ -219,8 +227,7 @@
 
 
     &__img {
-        flex: 0 1 100rem;
-        opacity: .8;
+        flex: 0 3 auto;
         position: relative;
 
         img {
@@ -247,11 +254,11 @@
         text-align: left;
         transition: all .3s ease-in-out;
         &:active {
-            background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
+            background-image: linear-gradient(to right top, $color-light, $color-dark);
             opacity: 1;
         }
         &:hover {
-            background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
+            background-image: linear-gradient(to right top, $color-light, $color-dark);
             opacity: .6;
         }
     }
@@ -262,29 +269,34 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    position: absolute;
+    overflow: auto;
     color: white;
     background-color: rgba(0, 0, 0, .6);
     height: 100vh;
     z-index: 39;
-    width: 75%;
+    width: 82%;
     opacity: 0;
     transition: .3s ease-in-out;
     .legend {
         display: flex;
-        margin-top: 5rem;
-        margin-left: .8rem;
+        margin-top: 3rem;
+        margin-left: .3rem;
         align-items: center;
         max-width: 100%;
-        justify-content: space-between;
         &__boxbox {
             display: flex;
+            align-items: center;
+    
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
         }
         &__box {
-            width: 4rem;
-            height: 3rem;
-            &--onebed {
-                background-color: #ebc63f;
+            width: 1rem;
+            height: 1rem;
+            &--available {
+                background-image: url(/img/available.svg);
+                background-size: cover;
             }
             &--twobed {
                 background-color: #d8c291;
@@ -321,11 +333,12 @@
 .image-area {
     position: relative;
     opacity: .9;
+    margin-top: 6rem;
     &__exit {
         position: absolute;
-        right: 2rem;
-        top: -6rem;
-        font-size: 4rem;
+        right: -9rem;
+        top: -9rem;
+        font-size: 5rem;
         opacity: .6;
         cursor: pointer;
         transition: all .1s ease-out;
@@ -356,7 +369,7 @@
     width: 0;
 }
 
-.show {
+.reveal {
     width: 53rem;
     z-index: 10;
     left: -95px;
@@ -376,11 +389,12 @@
 
 .dflex { 
     display: flex;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, .7), rgba(0, 0, 0, .9));
 }
 
 
 .active-btn {
-    background-image: linear-gradient(to right top, rgba(228, 197, 125, 0.5), rgba(228, 177, 0, 0.9));
+    background-image: linear-gradient(to right top, $color-light, $color-dark);
     opacity: 1;
 }
 

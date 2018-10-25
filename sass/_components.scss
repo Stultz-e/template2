@@ -17,7 +17,7 @@
 .navbar-nav {
     padding: 1.5rem 0;
     @include respond (lg) {
-        background-color: rgba($color: #000000, $alpha: .60);
+        background-color: rgba($color: #000000, $alpha: 1);
         margin-top: .5rem;
         align-items: flex-start;
     }
@@ -26,6 +26,8 @@
 .nav-link {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
+
+    
     @include respond (lg) {
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -36,7 +38,7 @@
     font-size: 1.6rem;
     text-transform: uppercase;
     font-family: $secondary-font;
-    font-weight: 400;
+    font-weight:500;
     transition: transform .3s ease-in-out;
     &:hover {
         transform: scale(1.1);
@@ -55,21 +57,44 @@
 
 .btn {
     text-transform: uppercase;
-    padding: 1rem 4rem;
+    padding: 1rem 3rem;
     display: inline-block;
-    font-size: 1.8rem;
+    border-radius: 2rem;
+    font-size: 1.6rem;
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
 
+    &:hover {
+        border: 1px solid $color-light;
+        color: $color-light;
+    }
+
+    &--form {
+        margin-top: 3rem;
+        width: 100%;
+        transition: all .3s;
+        border-radius: 2rem;
+        text-align: center;
+
+
+        &:hover {
+            color:white;
+            box-shadow: 5px 5px rgba(0, 0, 0, .3);
+            border: 1px solid #fff;
+        }
+    }
+
     &--modal {
         margin-right: 5rem;
-       i {
-           margin-right: 8px;
-       }
     }
 
     &--modal-left { 
+
+        &.toggled {
+            border: 1px solid #03001e;
+            color: #e7b339f3;
+        }
     }
 
 }

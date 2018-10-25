@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,400,600i,700i" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
@@ -17,7 +18,7 @@
 
 <body>
     <section class="cta">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="../img/logo.svg" alt="logo">
@@ -82,7 +83,7 @@
             <div class="content__child content__child--griditem25 amenities" style="background-image: url(/img/Amenities.png)">
             </div>
 
-            <div class="content__child content__child--griditem25"  style="background-image: url(/img/filler.jpg)">
+            <div class="content__child content__child--griditem25" style="background-image: url(/img/filler.jpg)">
             </div>
 
             <div class="content__child floorplans" style="background-image: url(/img/floorplans.png)">
@@ -120,81 +121,94 @@
     </section>
 
     <section class="floorpicker">
+        <!-- FLOOR PLAN INFORMATION WITH IMAGE AND CONTACT FORM BTNS -->
         <div class="slide">
+
             <div class="slide__textbody">
                 <h1>Garden District</h1>
                 <h3>1 Bed | 1 Bath 597 Square Feet $300.00 - $350.00 Deposit</h3>
-                <p>features: This floor plan include energy-efficient, stainless steel appliances, soaring nine foot ceilings with elegant crown molding.</p>
+                <h3>597 Square Feet</h3>
+                <h3>$300.00 - $350.00 Deposit</h3>
+                <h3>Availability 5 Units</h3>
                 <div class="slide__btn-group">
-                    <div class="btn btn--modal"><i class="fas fa-arrow-left"></i> BACK </div>
-                    <div class="btn btn--modal-left"> APPLY NOW  </div>
+                    <div class="btn btn--modal"> REQUEST TOUR </div>
+                    <div class="btn btn--modal-left" data-toggle="collapse"  data-target="#userForm"> apply now </div>
+
                 </div>
             </div>
             <div class="slide__img">
-                <img src="/img/floorplan1.png" alt="" class="rotating">
+                <i class="slide__exit fa fa-times" role="button"></i>
+                <img src="/img/floorplan.png" alt="">
+                    <!--         FORM FOR APPLY NOW OR REQUEST TOUR BTN -->
+    <form class="form collapse" id="userForm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="fname" name="fname" class="form__input" placeholder="First Name" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder ='First Name'">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="lname" name="lname" class="form__input" placeholder="Last Name" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder ='Last Name'">
+                    </div>
+
+                    <div class="col-sm-12"> <input type="email" name="email" class="form__input form__input--full"
+                            placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder ='Email'">
+                    </div>
+
+                    <div class="col-sm-12"> <input type="reason" name="reason" class="form__input form__input--full"
+                            placeholder="How did you hear about us?" onfocus="this.placeholder = ''" onblur="this.placeholder ='How did you hear about us?'">
+                    </div>
+
+                    <div class="col-sm-12"> <input type="movein" name="movein" class="form__input form__input--full"
+                            placeholder="Move in date" onfocus="this.placeholder = ''" onblur="this.placeholder ='Move in date'">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12">
+                        <div class="btn btn--form ">send</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </form>
+            </div>
 
-        <div class="app-form">
-            <form>
-                <input type="email" name="email" id="" placeholder="enter email">
-                <input type="email" name="email" id="" placeholder="enter email">
-                <input type="email" name="email" id="" placeholder="enter email">
-                <input type="email" name="email" id="" placeholder="enter email">
-                <input type="email" name="email" id="" placeholder="enter email">
-                <input type="email" name="email" id="" placeholder="enter email">
-            </form>
         </div>
-
 
         <div class="side" id="aptOne">
             <div class="image-area">
                 <i class="image-area__exit fa fa-times" role="button"></i>
-                <img class="image-area__lobby" src="/img/floorpicker.svg" alt="floorplan">
+                <img class="image-area__lobby" src="/img/platformed.svg" alt="floorplan">
                 <img class="img-101" src="/img/floorplan.png" id="imageFp1" alt="floorplan">
-                
+
                 <button class="image-area__btn" id="floorView">101</button>
-                    <div class="legend">
-                        <div class="legend__boxbox">
-                            <div class="legend__box legend__box legend__box--onebed"></div>
-                            <h6 class="legend__title">
-                                1 bedrooom
-                            </h6>
-                        </div>
- 
-                        <div class="legend__boxbox">
-                            <div class="legend__box legend__box--twobed"></div>
-                            <h6 class="legend__title">
-                                2 bedrooom
-                            </h6>
-                        </div>
+                <div class="legend">
+                    <div class="legend__boxbox">
+                        <div class="legend__box legend__box legend__box--available"></div>
+                        <h6 class="legend__title">
+                            Available
+                        </h6>
+                    </div>
 
-                        <div class="legend__boxbox">
-                            <div class="legend__box legend__box--threebed"></div>
-                            <h6 class="legend__title">
-                                3 bedrooom
-                            </h6>
-                        </div>
-
-                        <div class="legend__boxbox">
-                            <div class="legend__box legend__box--amenities"></div>
-                            <h6 class="legend__title">
-                                Amenities
-                            </h6>
-                        </div>
+                    <div class="legend__boxbox">
+                        <div class="legend__box legend__box--amenities"></div>
+                        <h6 class="legend__title">
+                            Amenities
+                        </h6>
                     </div>
                 </div>
             </div>
+        </div>
 
 
         <div class="floorpicker__overlay">
             <div class="floorpicker__pickerwrapper">
                 <div class="level" id="btnWrap">
                     <button class="level__btn" role="button" aria-expanded="false" id="btnApt4"> LEVEL 4 </button>
-                    <button class="level__btn" role="button"  id="btnApt3"> LEVEL 3 </button>
-                    <button class="level__btn"  role="button"  id="btnApt2"
-                    data-toggle="button" data-target="#apt2"> LEVEL 2 </button>
-                    <button class="level__btn" role="button" id="btnApt1"> LEVEL 1</button>    
+                    <button class="level__btn" role="button" id="btnApt3"> LEVEL 3 </button>
+                    <button class="level__btn" role="button" id="btnApt2" data-toggle="button" data-target="#apt2">
+                        LEVEL 2 </button>
+                    <button class="level__btn" role="button" id="btnApt1"> LEVEL 1</button>
                 </div>
             </div>
         </div>
@@ -332,8 +346,12 @@
     <script src="/js/wow.js"></script>
     <script src="/js/script.js"></script>
     <script>new WOW().init();</script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

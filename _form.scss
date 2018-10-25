@@ -1,25 +1,45 @@
 
-    .app-form {
-        background-color: orangered;
+    .form {
+     flex: 1 1 50%;
+     position: absolute;
+     top: 0; 
+     left: 0;
+     background: -webkit-linear-gradient(180deg, $color-light, $color-dark);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(180deg, $color-light, $color-dark); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     
+     
+     padding: 6rem;
+     border-radius: 3.5rem;
+
+/*         &__exit {
+            cursor: pointer;
+            color: #fff;
+            font-size: 4rem;
+            position: absolute;
+            top: -9rem;
+            right: 2rem;
+        } */
+
+    &__input {
         width: 100%;
-
+        display: block;
+        padding: 10px 0 10px 2rem;
+        font-size: 1.8rem;
+        border-radius: 2rem;
+        border: 1px solid #e6e6e6;
+        box-shadow: 5px 5px rgba(0, 0, 0, .3);
+        margin-bottom: 1.2rem;
+        transition: transform .3s cubic-bezier(0.6, 0.04, 0.98, 0.335), box-shadow .4s ease-in-out;
     
-        form {
-            margin: auto;
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 60%;
-        }
+        
+        &:focus {
+            outline: none;
+            box-shadow: 8px 8px 10px rgba(0, 0, 0, .3);
+            transform: scale(1.04, 1);
+            transform-origin: 50%;
 
-
-        input {
-            flex: 0 0 50%;
-            display: inline-block;
-            padding: .5rem 0 1rem .5rem;
-            font-size: 1.8rem;
         }
-    }
+    }    
+}   
 
 
