@@ -4,7 +4,7 @@
     x.addEventListener ('click', showApt)
     
     function showApt() {
-    document.querySelector ('.side').classList.toggle('activeApt');
+    document.querySelector ('.side').classList.toggle('active');
     } 
     
     // SHOW FLOOR PLAN PICKER
@@ -40,8 +40,7 @@
         showApt();
     }  
 
-    var c = document.querySelector('.image-area__exit')
-    c.addEventListener('.side').class.remove('.active');
+
 
 
 // some kinda if statement that highlights the things when the thing is open 
@@ -67,3 +66,26 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active-btn";
   });
 }
+
+/* $(function(){
+    $('#btnApt1').on('click', function() {
+        $('#apt1').toggle();
+    });
+
+    $('#btnApt2').on('click', function() {
+        $('#apt2').toggle();
+    });
+
+    $('#btnApt3').on('click', function() {
+        $('#apt3').toggle();
+    });
+
+    $('#btnApt4').on('click', function() {
+        $('#apt4').toggle();
+    });
+
+    $('.image-area__exit').on('click', function() {
+        $(this).closest('item').toggleClass('current'); });
+
+ }); */ // end
+
